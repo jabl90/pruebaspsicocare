@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { ResultsComponent } from './results/results.component';
 import { UsuarioService } from './services/usuario.service';
 import { FormsModule } from '@angular/forms';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,8 @@ import { FormsModule } from '@angular/forms';
 
   ],
   providers: [UsuarioService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
   
 })
 export class AppModule { }

@@ -14,21 +14,22 @@ export class ResultsComponent implements OnInit {
 
   constructor() { 
 
-      let R1=40;
-      let R2=5;
-      let R3=5;
-      let R4=5;
-      let R5=5;
+    let arrayrespuestas=JSON.parse(window.localStorage.getItem("enviorespuestas"));
 
 
+      let R1=arrayrespuestas._respuesta1;
+      let R2=arrayrespuestas._respuesta2;
+      let R3=arrayrespuestas._respuesta3;
+      let R4=arrayrespuestas._respuesta4;
+      let R5=arrayrespuestas._respuesta5;
 
-let Anxiety = R1+R2+R3+R4+R5;
-let Stress = R1+R2+R3+R4+R5;
-let Socialanxiety = R1+R2+R3+R4+R5;
-let Depression = R1+R2+R3+R4+R5;;
 
-document.getElementById("anxiety");   
-console.log(Depression);
+let Anxiety =(R1+R2+R3+R4+R5)*4;
+let Stress =(R1+R2+R3+R4+R5)*2;
+let Socialanxiety = (R1+R5)*4;
+let Depression = (R1+R2+R3+R4+R5)*4;
+
+console.log(Anxiety);
   
 
 
@@ -51,7 +52,7 @@ console.log(Depression);
   //document.getElementById("progressbarsocialanxiety").value= window.localStorage.getItem("socialanxiety");
 
   let array=["progressbardepression","progressbarsocialanxiety","progressbarstress","progressbaranxiety"];
-  let arraystorage=["depression","socialanxiety","stress","anxiety"];
+  let arraystorage=["Depression","Socialanxiety","Stress","Anxiety"];
 
   for (let index = 0; index < array.length; index++) {
 
@@ -66,15 +67,12 @@ console.log(Depression);
 
   $(function(){
   
-      
 
-   
+      let anxiety= parseInt(window.localStorage.getItem("Anxiety"))/10 ;
 
-      let anxiety= parseInt(window.localStorage.getItem("anxiety"))/10 ;
-
-      let depression= parseInt(window.localStorage.getItem("depression"))/10 ;
-      let stress= parseInt(window.localStorage.getItem("stress"))/10 ;
-      let socialanxiety= parseInt(window.localStorage.getItem("socialanxiety"))/10 ;
+      let depression= parseInt(window.localStorage.getItem("Depression"))/10 ;
+      let stress= parseInt(window.localStorage.getItem("Stress"))/10 ;
+      let socialanxiety= parseInt(window.localStorage.getItem("Socialanxiety"))/10 ;
 
      
       (<any>$("#chart")).radarChart({

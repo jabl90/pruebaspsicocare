@@ -22,7 +22,6 @@ const routes: Routes = [
   { path: "about", component: AboutComponent, pathMatch: "full" },
   { path: "test", redirectTo:"/test/1", pathMatch: "full" },
   { path: "test/:paso", component:NTestComponent, pathMatch: "full" },
-
   { path: "progress", component: ProgressComponent, pathMatch: "full" },
   { path: "perfil", component: PerfilComponent, pathMatch: "full" },
   { path: "welcome", component: WelcomeComponent, pathMatch: "full" },

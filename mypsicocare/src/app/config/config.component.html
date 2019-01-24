@@ -6,41 +6,18 @@
       <div class="row">
               <h2 id="h2alerts">Alerts</h2>
 
-          <div class="col s12 m7"><p>&nbsp;&nbsp;&nbsp;Notifications</p>
+          <div><p>&nbsp;&nbsp;&nbsp;Notifications</p>
               <!-- Alertas-->
               &nbsp; &nbsp; &nbsp;
               <label class="switch">
-
               <input type="checkbox" id="heroes" [checked]="toggleHeroes" (click)="toggleHeroes()">
-              <label class="slider" for="heroes"></label>
+              <span class="slider"></span>
             </label>
-
-             
               <br>          <br>
 
                   <div *ngIf="showHeroes" >
                       &nbsp;&nbsp;&nbsp;Alert frequency<br>
                       <!-- HTML5 Range-->
-
-
-
-
-
-
-                      &nbsp;&nbsp;&nbsp;  <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Every 3 hours</option>
-                        <option value="2">Every 6 hours</option>
-                        <option value="3">Every 12 hours</option>
-                        <option value="4">Daily</option>
-                        <option value="5">Every weekday</option>
-                        <option value="6">Weekly</option>
-                        <option value="7">Monthly</option>
-                        <option value="8">Weekly</option>
-
-                    </select>
-
-
 
 
 

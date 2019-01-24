@@ -99,12 +99,15 @@ reference.checkmail(datosUsuario.email).subscribe(data => {
         if(codigorojo==202 && codigoazul==202){
        console.log(" Neither username or email are already in use");
        //ESTO HAY QUE BORRARLO CUANDO SE UNA CON LA PARTE DE TEST
-            let respuesta1=555;
-            let respuesta2=5;
-            let respuesta3=5;
-            let respuesta4=5;
-            let respuesta5=5;
+       let arrayrespuestas=JSON.parse(window.localStorage.getItem("enviorespuestas"));
 
+
+       let respuesta1=arrayrespuestas._respuesta1;
+       let respuesta2=arrayrespuestas._respuesta2;
+       let respuesta3=arrayrespuestas._respuesta3;
+       let respuesta4=arrayrespuestas._respuesta4;
+       let respuesta5=arrayrespuestas._respuesta5;
+ 
 
          
             reference.subidausuario(datosUsuario.yourname,datosUsuario.email,datosUsuario.username,datosUsuario.password).subscribe(
@@ -227,10 +230,10 @@ document.getElementById('errorsubidaserver').classList.remove('hide');
          
                  }
         
-        else if(codigorojo=300){}
+        else if(codigorojo=300){console.log("")}
         else{ 
-            console.log("INTERNAL SERVER ERROR ");}
-            document.getElementById('errorsubidaserver').classList.remove('hide');
+            console.log("INTERNAL SERVER ERROR ");
+            document.getElementById('errorsubidaserver').classList.remove('hide');}
 
 
     }

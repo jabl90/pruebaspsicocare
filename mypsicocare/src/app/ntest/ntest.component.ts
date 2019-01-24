@@ -36,7 +36,7 @@ progressnumber:string;
 
   
   ngOnInit() {
-
+    
     $('select').formSelect();
 
     this.route.params.subscribe(params => {
