@@ -11,6 +11,7 @@ text-align: justify;
 }
 
 
+
 @font-face {
     font-family: gotham;
     src: url('esta.otf');
@@ -28,7 +29,7 @@ h1.title {
 }
 
 hr{
-   width: 10%;
+   width: 0%;
    color: #fff;
 }
 
@@ -52,9 +53,9 @@ input::-webkit-input-placeholder {
    -moz-border-radius: 2px;
    -webkit-border-radius: 2px;
    border-radius: 2px;
-   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+   -moz-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+   -webkit-box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+   box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -72,7 +73,7 @@ input::-webkit-input-placeholder {
 
 .login-register{
    font-size: 11px;
-   text-align: center;
+   text-align: left;
 }
 
 

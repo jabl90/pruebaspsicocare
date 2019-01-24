@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./CSS/registerstyle.css">
     -->
    
-    
+    <h1>{{ title }}</h1>
     <body>
         <div class="container">
           <div class="row main">
@@ -33,8 +33,9 @@
                   <hr />
                 </div>
               </div>
-              <div class="main-login main-center">
-                <div id="mensaje" class="error hide">Completa el registro</div>
+              <div id="errorsubidaserver" class="error hide">Uploading error. Please try again later.</div>
+              <div class="main-login main-center" id="mainbox">
+                <div id="mensaje" class="error hide">Complete the register</div>
                 <form id='loginform' class="form-horizontal" method="POST">
                   <div id="tunombre" class="form-group">
                     <label for="name" class="cols-sm-2 control-label">Your
@@ -44,8 +45,7 @@
                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span> <input
                           autofocus type="text" class="form-control" name="name" id="name" placeholder="Enter your Name"
                           minlength="3" required />
-                        <div id="errorname" class="error hide">Introduce un
-                          nombre más largo</div>
+                        <div id="errorname" class="error hide">Introduce a longer name.</div>
                       </div>
                     </div>
                   </div>
@@ -56,9 +56,11 @@
                     <div class="cols-sm-10">
                       <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span> <input
-                          type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" required />
-                        <div id="erroremail" class=" error hide">Introduce un
-                          email correcto</div>
+                          type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+                        <div id="erroremail" class=" error hide">Introduce a valid email adress.
+                          </div>
+                          <div id="errorregistroemail" class=" error hide">Email adress is already registered.
+                            </div>
                       </div>
                     </div>
                   </div>
@@ -70,8 +72,8 @@
                         <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span> <input type="text"
                           class="form-control" name="username" id="username" placeholder="Enter your Username" required
                           minlength="3" />
-                        <div id="errorusuario" class=" error hide">introduce un
-                          nombre de usuario correcto</div>
+                        <div id="errorusuario" class=" error hide">Introduce a valid username.</div>
+                          <div id="errorregistrousuario" class=" error hide">Username is already registered.</div>
                       </div>
                     </div>
                   </div>
@@ -82,35 +84,37 @@
                       <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input
                           type="password" class="form-control" name="password" id="password" placeholder="Enter your Password"
-                          minlength="4" maxlength="10" pattern="[a-zA-Z0-9]*" required />
-                        <div id="errorpassword" class=" error hide">Introduce un
-                          password correcto. El formato de password no es válido</div>
+                          minlength="4" maxlength="18"  required />
+                        <div id="errorpassword" class=" error hide">Introduce a valid password.
+                        Password format must contains between 4-18 characters.</div>
                       </div>
                     </div>
                   </div>
       
                   <div id="tuconfirmacion" class="form-group">
-                    <label for="confirm" class="cols-sm-2 control-label">Confirm
-                      Password</label>
+                    <label for="confirm" class="cols-sm-2 control-label">Confirm your password</label>
                     <div class="cols-sm-10">
                       <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input
                           type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password"
                           pattern="[a-zA-Z0-9]*" required />
-                        <div id="passwordnomatch" class="error hide">el password
-                          no coincide</div>
+                        <div id="passwordnomatch" class="error hide">The passwords don't match.</div>
                       </div>
                     </div>
                   </div>
+                
                   <div id="boton" class="form-group ">
                     <button type="submit" id="register" class="btn btn-primary btn-lg btn-block login-button btn-outline-primary">Register</button>
+                    
                   </div>
-                  <div id="login" class="login-register">
-                    <a href="/login">Login</a>
-                  </div>
+                 
+                
                 </form>
+                <div id="login" class="login-register">
+                    <a href="/login">Sign in instead</a>  </div>
               </div>
             </div>
+            
           </div>
           </div>
       </body>

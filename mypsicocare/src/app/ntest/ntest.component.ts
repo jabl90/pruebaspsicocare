@@ -17,7 +17,7 @@ export class NTestComponent implements OnInit {
 
   
   private _paso: number=0;
-  private _respuestas:Test=new Test(1,0,0,0,0,0); //me lo tengo que llevar al service(donde lo tenía);
+  private _respuestas:Test=new Test(1,0,0,0,0,0,0,0,0,0); //me lo tengo que llevar al service(donde lo tenía);
 
   
 

@@ -17,15 +17,15 @@ export class ActividadesService {
 
   getActivityFromApi():Observable<Activity[]>{
     const ApiActivities  = this._http.get<Activity[]>(this.API_URL);
-    console.log("estamos aqui!!");
+    console.log("estamos aqui!!"+JSON.stringify(ApiActivities));
     return ApiActivities;
     
   }
 
-  
+ 
   getActivityFromApiByAid(aid: number):Observable<Activity>{
     const ApiActivityAid = this._http.get<Activity>(`${this.API_URL}/${aid}`)
-    console.log(ApiActivityAid);
+    console.log("Apiactividad"+JSON.stringify(ApiActivityAid));
     
    return ApiActivityAid;
 
