@@ -1,0 +1,179 @@
+
+<!-------------------------------------------------------TEST 1--------------------------------------------------------------------------------->
+
+    <section name="test1" *ngIf="paso==1">
+
+     <!--Pregunta 1--> <preguntas></preguntas>
+
+     <table style="align-content: center; margin: auto;">
+       <form #testform="ngForm"(ngSubmit)="onSubmit(respuesta)">
+        <input type="hidden" id="paso" name="paso" value=1/>
+        <tr>
+          <td><input class="inputsubmitbtn" id="q1" name="respuestainput" type="radio" [(ngModel)]="_newTest.respuestainput" [value]="1"></td>
+          <td><span> I am not particulary discouraged about my
+              future.</span></td>
+        </tr>
+        <tr>
+          <td><input class="inputsubmitbtn" id="q1" name="respuestainput" type="radio" [(ngModel)]="_newTest.respuesta1" [value]="2"></td>
+          <td>I feel discouraged about the future.</td>
+        </tr>
+        <tr>
+          <td><input class="inputsubmitbtn" id="q1" name="respuestainput" type="radio" [(ngModel)]="_newTest.respuesta1" [value]="3"></td>
+          <td>I feel I have nothing to look forward to.</td>
+        </tr>
+        <tr>
+          <td><input class="inputsubmitbtn" id="q1" name="respuestainput"type="radio" [(ngModel)]="_newTest.respuesta1" [value]="4"></td>
+          <td>I feel the future is hopeless.</td>
+        </tr>
+    <!--Navegación--> <footer-cambio-pregunta></footer-cambio-pregunta>
+  </form>
+     </table>
+  </section>
+
+
+<!------------------------------------------------------------- FIN TEST 1------------------------------------------------------------------------>
+
+<!---------------------------------------------------------------------- TEST 2------------------------------------------------------------------>
+
+    <section name="test2" *ngIf="paso=2">
+
+       <!--Pregunta 2--> <preguntas></preguntas>
+
+      <table style="align-content: center; margin: auto;">
+        <form #testform="ngForm"(ngSubmit)="onSubmit(respuesta)">
+          <input type="hidden" id="paso" name="paso" value="2" />
+        <tr>
+          <td style="text-align: center;"><input id="q21" name="respuestainput" [(ngModel)]="_newTest.respuesta2" [value]=1 type="radio"></td>
+          <td style="text-align: center;"><input id="q22" name="respuestainput" [(ngModel)]="_newTest.respuesta2" [value]=2 type="radio"></td>
+          <td style="text-align: center;"><input id="q23" name="respuestainput" [(ngModel)]="_newTest.respuesta2" [value]=3 type="radio"></td>
+          <td style="text-align: center;"><input id="q24" name="respuestainput" [(ngModel)]="_newTest.respuesta2" [value]=4 type="radio"></td>
+          <td style="text-align: center;"><input id="q25" name="respuestainput" [(ngModel)]="_newTest.respuesta2" [value]=5 type="radio"></td>
+        </tr>
+        
+        <tr>
+          <td>Mostly agree&nbsp;</td>
+          <td>&nbsp;Partly agree&nbsp;</td>
+          <td>&nbsp;Neutral&nbsp;</td>
+          <td>&nbsp;Partly disagree&nbsp;</td>
+          <td>&nbsp;Mostly disagree&nbsp;</td>
+        </tr>
+      <div>
+      <br> <br>
+      </div>
+      <!--Navegación--> <footer-cambio-pregunta></footer-cambio-pregunta>
+    </form>
+      </table>
+    </section>
+   
+<!------------------------------------------------------------------FIN  TEST 2---------------------------------------------------------------->
+
+<!------------------------------------------------------------------ TEST 3--------------------------------------------------------------------->
+    <section name="test3" *ngIf="paso=3">
+
+       <!--Pregunta 3--> <preguntas></preguntas>
+
+      <table style="align-content: center; margin: auto;">
+        <form #testform="ngForm"(ngSubmit)="onSubmit(respuesta)">
+        <input type="hidden" id="paso" name="paso" value="3" />
+          <tr>
+            <td><input id="q31" name="respuestainput" [(ngModel)]="_newTest.respuesta3" [value]="1" type="radio"></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><input id="q32" name="respuestainput" [(ngModel)]="_newTest.respuesta3" [value]="2" type="radio"></td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><input id="q33" name="respuestainput" [(ngModel)]="_newTest.respuesta3" [value]="3" type="radio"></td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><input id="q34" name="respuestainput" [(ngModel)]="_newTest.respuesta3" [value]="4" type="radio"></td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td><input id="q35" name="respuestainput" [(ngModel)]="_newTest.respuesta3" [value]="5" type="radio"></td>
+            <td>5</td>
+          </tr>
+      
+
+        <!--Navegación--> <footer-cambio-pregunta></footer-cambio-pregunta>
+
+      </form>
+
+    </table>
+
+    </section>
+ 
+
+<!------------------------------------------------------------------ FIN TEST 3------------------------------------------------------------------>
+
+
+<!------------------------------------------------------------------ TEST 4------------------------------------------------------------------->
+
+    <section name="test4" *ngIf="paso=4">
+
+       <!--Pregunta 4--> <preguntas></preguntas>
+
+      <form #testform="ngForm"(ngSubmit)="onSubmit(respuesta)">
+      <input type="hidden" id="paso" name="paso" value="4" />
+       
+        <div id="centrodiv" style="margin-left: 38%;">
+          <input style="display: inline-block;" class="botoninput" type="button" id="5" name="respuestainput" [value]="Very often" onclick="botofuncion(this.id)"> 
+          <input class="botoninput" type="button" id="4" name="respuestainput" [value]="Fairly often" onclick="botofuncion(this.id)"> 
+          <input class="botoninput" type="button" id="3" name="respuestainput" [value]="Sometimes" onclick="botofuncion(this.id)"> 
+          <input class="botoninput" type="button" id="2" name="respuestainput" [value]="Almost never" onclick="botofuncion(this.id)"> 
+          <input class="botoninput" type="button" id="1" name="respuestainput" [value]="Never"onclick="botofuncion(this.id)">
+        </div>
+
+      <div>
+      <br> 
+      </div>
+
+      <!--Navegación--> <footer-cambio-pregunta></footer-cambio-pregunta>
+
+    </form>
+
+    </section>
+   
+
+
+<!------------------------------------------------------------------ FIN TEST 4---------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------ TEST 5------------------------------------------------------------------->
+ 
+    <section name="test5"  *ngIf="paso=5">
+
+       <!--Pregunta 5--> <preguntas></preguntas>
+      
+      <form #testform="ngForm" (ngSubmit)="onSubmit(respuesta)">
+       <input type="hidden" id="paso" name="paso" value="5" />
+
+        <table style="align-content: center; margin: auto; font-size: 19px; align-items: center; width: 500px;">
+          <tr>
+            <td>
+              <p style="margin: auto;" class="range-field">
+                <input name="respuestainput"  type="range" id="test5" min="0" max="5" />
+              </p>
+             
+            </td>
+          </tr>
+        </table>
+          <table style="align-content: center; margin: auto; font-size: 19px; align-items: center; width: 500px;">
+            <tr>
+              <td>
+                <p style="margin: auto;" class="range-field">
+                  <input name="respuestainput" type="range" id="test5" min="0" max="5" />
+                </p>
+                
+              </td>
+            </tr>
+          </table>
+         
+          <!--Navegación--> <footer-cambio-pregunta></footer-cambio-pregunta>
+
+        </form>   
+
+      </section>
+<!------------------------------------------------------------------ FIN TEST 5---------------------------------------------------------------->

@@ -1,0 +1,12 @@
+<section>
+    <h1>Activities</h1>
+    <ul *ngFor="let anActivity of activities">
+        <li>
+            <!-- <a [routerLink]="['activity']"> -->
+                <button (click)="onClick(anActivity.aid)" value="{{anActivity.aid}}">
+                    {{anActivity.aid}} | {{anActivity.statement}} 
+                </button>
+            <!-- </a> -->
+        </li>
+    </ul>
+</section>
